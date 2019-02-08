@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section id="work" class="page space">
+	<div class="container text-center">
+		<div class="heading">
+			<h2>Our Work</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, alias enim placeat earum quos ab.</p>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="portfolio">
+					<ul class="filters list-inline">
+						<li>
+							<a class="active" data-filter="*" href="#">All</a>
+						</li>
+						<li>
+							<a data-filter=".photography" href="#">Wash</a>
+						</li>
+						<li>
+							<a data-filter=".branding" href="#"> Servicing</a>
+						</li>
+						<li>
+							<a data-filter=".web" href="#">Painting</a>
+						</li>
+					</ul>
+					<ul class="items list-unstyled clearfix animated hiding" data-animation="fadeInRight">
+						<li class="item branding">
+							<a href="static/assets/img/work/1.jpg" class="fancybox">
+								<img src="static/assets/img/work/1.jpg" alt="">
+								<div class="overlay">
+									<span>Etiam porta</span>
+								</div>
+							</a>
+						</li>
+						<li class="item photography">
+							<a href="static/assets/img/work/2.jpg" class="fancybox">
+								<img src="static/assets/img/work/2.jpg" alt="">
+								<div class="overlay">
+									<span>Lorem ipsum</span>
+								</div>
+							</a>
+						</li>
+						<li class="item branding">
+							<a href="static/assets/img/work/3.jpg" class="fancybox">
+								<img src="static/assets/img/work/3.jpg" alt="">
+								<div class="overlay">
+									<span>Vivamus quis</span>
+								</div>
+							</a>
+						</li>
+						<li class="item photography">
+							<a href="static/assets/img/work/4.jpg" class="fancybox">
+								<img src="static/assets/img/work/4.jpg" alt="">
+								<div class="overlay">
+									<span>Donec ac tellus</span>
+								</div>
+							</a>
+						</li>
+						<li class="item photography">
+							<a href="static/assets/img/work/5.jpg" class="fancybox">
+								<img src="static/assets/img/work/5.jpg" alt="">
+								<div class="overlay">
+									<span>Etiam volutpat</span>
+								</div>
+							</a>
+						</li>
+						<li class="item web">
+							<a href="static/assets/img/work/6.jpg" class="fancybox">
+								<img src="static/assets/img/work/6.jpg" alt="">
+								<div class="overlay">
+									<span>Donec congue </span>
+								</div>
+							</a>
+						</li>
+						<li class="item photography">
+							<a href="static/assets/img/work/7.jpg" class="fancybox">
+								<img src="static/assets/img/work/7.jpg" alt="">
+								<div class="overlay">
+									<span>Nullam a ullamcorper diam</span>
+								</div>
+							</a>
+						</li>
+						<li class="item web">
+							<a href="static/assets/img/work/8.jpg" class="fancybox">
+								<img src="static/assets/img/work/8.jpg" alt="">
+								<div class="overlay">
+									<span>Etiam consequat</span>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}

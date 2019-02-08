@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="WebThemez">
+	<link rel="shortcut icon" href="">
+	<title>CAR ZONE</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600">
+	<link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+	<!-- FancyBox -->
+	<link href="static/assets/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/assets/css/style.css">
+	<link rel="stylesheet" href="static/assets/css/animate.min.css">
+	<link rel="stylesheet" href="static/assets/css/font-awesome.min.css">
+	<!--[if lt IE 9]>
+    <script src="static/assets/js/html5shiv.js"></script>
+    <script src="static/assets/js/respond.min.js"></script>
+    <![endif]-->
+	<title> {% block title %}Living Skies Aviation{% endblock %}</title>
+</head>
+
+<body>
+	<div id="navbar-top">
+		<nav class="navbar navbar-default navbar-static" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand nav-external" href="#home"><strong>Living Skies Aviation</strong></a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active">
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/services">Services</a>
+						</li>
+						<li>
+							<a href="/about">About</a>
+						</li>
+						<li>
+							<a href="/contact">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	{% block content %}{% endblock %}
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 animated hiding" data-animation="fadeInUp">
+					<ul class="social list-inline ">
+						<li>
+							<a class="facebook" href="http://www.facebook.com" title="Facebook">
+								<i class="fa fa-facebook fa-2x"></i>
+							</a>
+						</li>
+						<li>
+							<a class="twitter" href="http://www.twitter.com" title="Twitter">
+								<i class="fa fa-twitter fa-2x"></i>
+							</a>
+						</li>
+						<li>
+							<a class="google-plus" href="http://www.plus.google.com" title="Google+">
+								<i class="fa fa-google-plus fa-2x"></i>
+							</a>
+						</li>
+						<li>
+							<a class="dribbble" href="http://www.linkedin.com" title="Dribbble">
+								<i class="fa fa-dribbble fa-2x"></i>
+							</a>
+						</li>
+					</ul>
+					<p class="copyright">
+						<p class="text-center">Copyright © 2019. All Rights Reserved. <a href="https://webthemez.com/tag/free" target="_blank">Free HTML Templates</a> by WebThemez.com </p>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="static/assets/js/modernizr-latest.js"></script>
+	<script src="static/assets/js/jquery.min.js"></script>
+	<script src="static/assets/js/bootstrap.min.js"></script>
+	<script src="static/assets/js/jquery.cslider.js"></script>
+	<script src="static/assets/js/isotope.pkgd.min.js"></script>
+	<script src="static/assets/js/jquery.fancybox.pack.js"></script>
+	<script src="static/assets/js/jquery.fancybox-media.js"></script>
+	<script src="static/assets/js/imagesloaded.min.js"></script>
+	<script src="static/assets/js/jquery.scrollTo.min.js"></script>
+	<script src="static/assets/js/jquery.nav.min.js"></script>
+	<script src="static/assets/js/jquery.appear.min.js"></script>
+	<script src="static/assets/js/twitterFetcher.min.js"></script>
+	<script src="static/contact/jqBootstrapValidation.js"></script>
+	<script src="static/contact/contact_me.js"></script>
+	<script src="static/assets/js/script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#da-slider').cslider({
+				autoplay: true,
+				bgincrement: 0
+			});
+		});
+	</script>
+</body>
+
+</html>
