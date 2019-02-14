@@ -8,7 +8,6 @@ app = Flask(__name__)
 
 app.config.from_pyfile("settings.py")
 
-print(f"{app.config}")
 # # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
