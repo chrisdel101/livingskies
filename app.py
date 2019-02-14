@@ -2,13 +2,13 @@
 from flask import Flask
 from flask import render_template
 from flask import g
+import os
 
 app = Flask(__name__)
-app.config['TESTING'] = True
-app.config['ENV'] = 'development'
-app.config.from_pyfile("flask.cfg")
 
+app.config.from_pyfile("settings.py")
 
+print(f"{app.config}")
 # # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 

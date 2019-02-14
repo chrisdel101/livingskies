@@ -6,18 +6,18 @@ function initNavbar() {
 
         // currentClass: 'active',
 
-    $('.nav-external').click(function (e) {
-        e.preventDefault();
-        $('html, body').stop().animate({
-            scrollTop: $($(this).attr("href")).offset().top - scrollOffset
-        }, scrollSpeed, easing);
-    });
+    // $('.nav-external').click(function (e) {
+    //     e.preventDefault();
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($(this).attr("href")).offset().top - scrollOffset
+    //     }, scrollSpeed, easing);
+    // });
     //
-    $('#navbar-top .navbar-default').affix({
-        offset: {
-            top: $('#home').height()
-        }
-    });
+    // $('#navbar-top .navbar-default').affix({
+    //     offset: {
+    //         top: $('#home').height()
+    //     }
+    // });
 }
 function initPortfolio () {
     var portfolio = $('#portfolio');
