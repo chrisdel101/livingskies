@@ -263,6 +263,10 @@ a:focus {
 	padding: 60px 0;
 }
 
+.page .container.photo-area {
+	padding: 0
+}
+
 .page .content.cover {
 	padding: 240px 0
 }
@@ -486,7 +490,22 @@ a:focus {
 	text-shadow: none;
 }
 
-#about .content {
+#about {
+	padding: 0;
+	color: #fff;
+	background-image: url(../img/cover/about.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	height: 500px;
+}
+
+#about .row.portrait {
+	display: flex;
+	justify-content: center;
+}
+
+.profile #about .content {
 	padding-bottom: 0
 }
 
@@ -494,15 +513,11 @@ a:focus {
 	padding-top: 10px
 }
 
-#about .teammate .profile-photo {
-	overflow: hidden;
-}
-
-#about .teammate .profile-photo {
+.teammate .profile-photo {
 	overflow: hidden;
 	display: inline-block;
-	width: 140px;
-	height: 140px;
+	width: 400px;
+	border: 3px black solid;
 }
 
 #about .teammate .profile-photo img {
