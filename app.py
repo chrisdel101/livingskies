@@ -5,6 +5,7 @@ from flask import render_template
 from flask import g
 from flask_mail import Mail
 from flask_mail import Message
+from flask import Flask, flash, redirect, url_for
 
 import os
 
@@ -39,30 +40,28 @@ def render_about():
 
 @app.route('/contact', methods=['GET','POST' ])
 def render_contact():
+    print(request.method)
     if(request.method == 'GET'):
-        print(app.config['MAIL_PASSWORD'])
-        print(app.config['MAIL_SERVER'])
-        print(app.config['MAIL_USERNAME'])
-        print(app.config['MAIL_PORT'])
-        return render_template('contact.html')
+        return render_template("contact.html")
     elif(request.method == 'POST'):
         if(not request.form.get('name') or not request.form.get('email') or not request.form.get('message')):
         # TODO
             print(request.form)
             return
         else:
-            print(app.config['MAIL_PASSWORD'])
-            print(app.config['MAIL_SERVER'])
-            print(app.config['MAIL_USERNAME'])
-            print(app.config['MAIL_PORT'])
-            name = request.form.get('name')
-            email = request.form.get('email')
-            message = request.form.get('message')
-
-            msg = Message(
-                  subject=f'email from: {name} at {email}',
-                  body=f"This is an email from Barry's website form.\n Message: {message}",
-                  sender=app.config['MAIL_USERNAME'],
-                  recipients=app.config['MAIL_USERNAME'].split())
-            mail.send(msg)
-            return render_template('contact.html')
+            try:
+                name = request.form.get('name')
+                email = request.form.get('email')
+                message = request.form.get('message')
+                msg = Message(
+                      subject=f'email from: {name} at {email}',
+                      body=f"This is an email from Barry's website form.\n Message: {message}",
+                      sender=app.config['MAIL_USERNAME'],
+                      recipients=app.config['MAIL_USERNAME'].split())
+                mail.send(msg)
+                flash('Message successfully sent')
+                return render_template('contact.html')
+            except:
+                raise ValueError ("An error occured on hash entry")
+                flash("An error occured")
+                return render_template("contact.html")

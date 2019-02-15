@@ -592,6 +592,10 @@ a:focus {
 	padding: 65px 0 !important;
 }
 
+#contact .container {
+	color: black;
+}
+
 #contact,
 #contact a,
 #contact a:hover,
@@ -605,6 +609,10 @@ a:focus {
 
 #contact a {
 	display: block
+}
+
+.contact-alert {
+	margin-bottom: 0
 }
 
 #footer {

@@ -2,18 +2,30 @@
 
 {% block content %}
 
+{% with messages = get_flashed_messages(with_categories=true) %}
+<!-- Categories: success (green), info (blue), warning (yellow), danger (red) -->
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-success alert-dismissible contact-alert" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	<!-- <strong>Title</strong> --> {{ message }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+
+{% block main %}
 <section id="contact" class="content-section form contact light space">
 	<div class="container">
 		<div class="content cover text-center">
 			<div class="heading">
 				<h2>Getting in touch</h2>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br /><br /></p>
+				<h4>Fill out the form and we will return your message<br /><br /></h4>
 			</div>
 			<div class="row">
 
 				<div class="col-md-offset-2 col-md-8 anim fadeInLeft animated" style="visibility: visible;">
-					NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form
 
 					<form name="sentMessage" method="POST" action="/contact" id="contactForm">
 						<h3>Contact Form</h3>
@@ -46,4 +58,5 @@
 		<span id="message_sent"><i class="fa-check fa"></i></span><!-- jQuery display of giant checkmark -->
 
 </section>
+{% endblock %}
 {% endblock %}
