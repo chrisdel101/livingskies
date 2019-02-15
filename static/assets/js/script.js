@@ -4,20 +4,20 @@ function initNavbar() {
     var scrollOffset = 68;
     var easing = 'swing';
 
-        // currentClass: 'active',
+        currentClass: 'active',
 
-    // $('.nav-external').click(function (e) {
-    //     e.preventDefault();
-    //     $('html, body').stop().animate({
-    //         scrollTop: $($(this).attr("href")).offset().top - scrollOffset
-    //     }, scrollSpeed, easing);
-    // });
-    //
-    // $('#navbar-top .navbar-default').affix({
-    //     offset: {
-    //         top: $('#home').height()
-    //     }
-    // });
+    $('.nav-external').click(function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: $($(this).attr("href")).offset().top - scrollOffset
+        }, scrollSpeed, easing);
+    });
+
+    $('#navbar-top .navbar-default').affix({
+        offset: {
+            top: $('#home').height()
+        }
+    });
 }
 function initPortfolio () {
     var portfolio = $('#portfolio');
@@ -76,6 +76,11 @@ function initStart(){
 	$('.collapse ul li a').click(function(){
 		$(this).parents('.collapse').removeClass('in');
 		});
+    if(window.innerWidth < 768){
+        console.log('in')
+        $('#home').height('');
+    }
+    console.log('hh', homeHeight)
 	}
 
 $(document).ready(function () {

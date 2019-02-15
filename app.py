@@ -59,8 +59,10 @@ def render_contact():
             email = request.form.get('email')
             message = request.form.get('message')
 
-            msg = Message("Hello",
+            msg = Message(
+                  subject=f'email from: {name} at {email}',
+                  body=f"This is an email from Barry's website form.\n Message: {message}",
                   sender=app.config['MAIL_USERNAME'],
-                  recipients=["arssonist@yahoo.com"])
+                  recipients=app.config['MAIL_USERNAME'].split())
             mail.send(msg)
             return render_template('contact.html')
