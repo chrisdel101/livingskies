@@ -13,25 +13,26 @@
 			<div class="row">
 
 				<div class="col-md-offset-2 col-md-8 anim fadeInLeft animated" style="visibility: visible;">
-					<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-					<form name="sentMessage" id="contactForm" novalidate>
+					NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form
+
+					<form name="sentMessage" method="POST" action="/contact" id="contactForm">
 						<h3>Contact Form</h3>
 						<div class="control-group">
 							<div class="controls">
-								<input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" />
+								<input type="text" class="form-control" placeholder="Full Name" id="name" required data-validation-required-message="Please enter your name" name="name" />
 								<p class="help-block"></p>
 							</div>
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
+								<input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" name="email" />
 							</div>
 						</div>
 
 						<div class="control-group">
 							<div class="controls">
 								<textarea rows="10" cols="100" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter your message" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999"
-								 style="resize:none"></textarea>
+								 style="resize:none" name="message"></textarea>
 							</div>
 						</div>
 						<div id="success"> </div> <!-- For success/fail messages -->
