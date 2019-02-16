@@ -8,5 +8,6 @@ MarkupSafe
 pip
 python-dotenv
 setuptools
-Werkzeug 
+Werkzeug
 gunicorn
+gevent
